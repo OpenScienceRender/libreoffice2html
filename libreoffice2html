@@ -1,0 +1,11 @@
+#!/bin/bash
+WGET=/usr/bin/wget
+LIBREOFFICE=/usr/bin/libreoffice
+
+TMPDIR="$(mktemp --directory)"
+OUTPUTFILE="tmp.html"
+
+${WGET} --directory-prefix ${TMPDIR} "${1}"
+${LIBREOFFICE} --headless --outdir "${TMPDIR}" -convert-to html ${TMPDIR}/*
+
+cat "${OUTPUTFILE}"
