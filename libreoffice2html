@@ -5,6 +5,6 @@ LIBREOFFICE=/usr/bin/libreoffice
 TMPDIR="$(mktemp --directory)"
 
 ${WGET} --directory-prefix ${TMPDIR} "${1}"
-${LIBREOFFICE} --headless --outdir "${TMPDIR}" -convert-to html ${TMPDIR}/*
+${LIBREOFFICE} --headless -convert-to html --outdir "${TMPDIR}" "${TMPDIR}/*"
 
 cat "${TMPDIR}/*.html"
