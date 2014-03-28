@@ -11,6 +11,6 @@ sudo apt-get install libreoffice wget
 # Usage:
 
 ```bash
-./libreoffice2html https://raw.githubusercontent.com/OpenScienceRender/ExampleData/master/test.ods > output_text.html
-./libreoffice2html https://raw.githubusercontent.com/OpenScienceRender/ExampleData/master/test.odt > output_spreadsheet.html
+./libreoffice2html https://raw.githubusercontent.com/OpenScienceRender/ExampleData/master/test.ods > output_spreadsheet.html
+./libreoffice2html https://raw.githubusercontent.com/OpenScienceRender/ExampleData/master/test.odt > output_text.html
 ```
