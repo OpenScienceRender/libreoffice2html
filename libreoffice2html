@@ -2,9 +2,9 @@
 WGET=/usr/bin/wget
 LIBREOFFICE=/usr/bin/libreoffice
 
-TMPDIR="$(mktemp --directory)"
+TMPDIR=$(mktemp --directory)
 
 ${WGET} --directory-prefix ${TMPDIR} "${1}"
-${LIBREOFFICE} --headless -convert-to html --outdir "${TMPDIR}" "${TMPDIR}/*"
+${LIBREOFFICE} --headless -convert-to html --outdir ${TMPDIR} ${TMPDIR}/* &> /dev/null
 
-cat "${TMPDIR}/*.html"
+cat ${TMPDIR}/*.html
